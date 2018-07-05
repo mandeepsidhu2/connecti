@@ -1,12 +1,12 @@
 <main id="posts-home">
 
-	<div>Group Links</div>
+	<div class="left">Group Links</div>
 
 	<div class="deewar-posts">
 		<div class="new-post-form">
 			<% if user_signed_in? %>
 			<%= form_for @post do |f| %>
-				<%= f.label :content %>
+				
 				<%= f.text_area :content %>
 
 				<%= f.submit %>
@@ -14,11 +14,13 @@
 			<% end %>
 		</div>
 
-		<div >
-			<ul class="posts-list">
+		<div  >
+			<ul class="posts-list" style="
+    list-style:  none;
+">
 				<% @posts.reverse.each do |post| %>
 				<li>
-					<div>
+					<div class="card">
 
 						<p><%= post.content %></p>
 						<p><%= post.user.email %></p>
@@ -85,7 +87,7 @@
 	</div>
 
 
-	<div>Friends</div>
+	<div class="right">Friends</div>
 
 </main>
 
