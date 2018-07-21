@@ -5,13 +5,13 @@ class CommentsController < ApplicationController
 
 
   def create
-  	comment = Comment.create(
+  	@new_comment = Comment.create(
   		content: params[:comment][:content], 
   		user_id: current_user.id, 
   		post_id: params[:comment][:post_id]
   		)
-
-  	redirect_to root_path
+    UserMailer.new_comment(@new_comment.id).deliver_now
+  	# redirect_to root_path
 
   end
 

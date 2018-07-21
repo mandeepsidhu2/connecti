@@ -1,0 +1,6 @@
+console.log("newcmntpancho");
+var list=$("#post-comment-list-<%=@new_comment.post_id%>");
+
+var cmnt=$("<%=escape_javascript render 'comments/readComment' ,comment:@new_comment %>");
+
+list.prepend(cmnt);

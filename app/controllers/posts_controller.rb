@@ -12,20 +12,34 @@ class PostsController < ApplicationController
 
     # for new comment
     @comment = Comment.new
+
+    respond_to do |format|
+     
+        format.html
+        format.json{
+
+         
+          return render json:@posts
+        
+       
+        }
+      
+    end
   end
 
   def create
 
-  	post = Post.create(content: params[:post][:content], user_id: current_user.id)
-
-  	redirect_to action: "home"
+  	@post = Post.create(content: params[:post][:content], user_id: current_user.id)
+    @comment =Comment.new;
+  	# redirect_to action: "home"
 
   end
 
   def destroy
+    @post_id=@post.id
 	@post.destroy
 
-  	redirect_to action: "home"
+  	# redirect_to action: "home"
   end
 
 

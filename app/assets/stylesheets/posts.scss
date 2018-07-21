@@ -2,55 +2,43 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 #posts-home{
-	a{
-	text-decoration: none;
-	color: indianred;
-	}
-	display:flex;
-	 
-	justify-content:space-around;
-
-	.deewar-posts{
-	
-	display: flex;
-    flex-grow: -0.2;
-    flex-direction: column;
-    max-width: 60%;
-	}
-	.new-post-form form{
-	    display: flex;
-    flex-direction: column;
-	}
-	.post-list{
-	
-	list-style:none;
-
-	}
-	.card{
-	list-style:none;
-
-		margin-top:10px;
-		text-align:center;
-	    background-color:#ffffffd9;
-	    
-	   
-	    .comment{
-	    list-style:none;
-	        font-size: 14px;
-	        li{
-	        display:inline;
-	        }
-	    }
-	}
-
-	
-
-	.left{
-	color:white;
-	
-	}
-	.right{
-	color:white;
-	}
+		a{
+			text-decoration: none;
+			color: indianred;
+		}
+		display:flex;
+		justify-content:space-around;
+		.deewar-posts{
+		display: flex;
+    	flex-grow: -0.2;
+    	flex-direction: column;
+    	max-width: 60%;
+		}
+		.new-post-form form{
+	    	display: flex;
+    		flex-direction: column;
+		}
+		.post-list{
+			list-style:none;
+		}
+		.card{
+			list-style:none;
+			margin-top:10px;
+			text-align:center;
+	    	background-color:#ffffffd9;
+	    	.comment{
+	    		list-style:none;
+	        	font-size: 14px;
+	        	li{
+	        	display:inline;
+	    		}
+			}
+		}
+		.left{
+			color:white;
+		}
+		.right{
+			color:white;
+		}
 
 }

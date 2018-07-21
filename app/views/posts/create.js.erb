@@ -1,0 +1,6 @@
+console.log("qq");
+var list=$("#posts-all");
+
+
+var newPost = $('<%= escape_javascript render "post", post: @post %>');
+list.prepend(newPost);
